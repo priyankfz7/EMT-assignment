@@ -12,13 +12,16 @@ const SignUp = () => {
     setLoad(true);
     e.preventDefault();
     const user = { email, password, username };
-    let res = await fetch("http://localhost:8080/users/register", {
-      method: "POST",
-      body: JSON.stringify(user),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    let res = await fetch(
+      "https://emt-backend-0bbo.onrender.com/users/register",
+      {
+        method: "POST",
+        body: JSON.stringify(user),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     setLoad(false);
     if (res.status >= 300) {
       res = await res.json();

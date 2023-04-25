@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const user = { email, password };
-    let res = await fetch("http://localhost:8080/users/login", {
+    let res = await fetch("https://emt-backend-0bbo.onrender.com/users/login", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {

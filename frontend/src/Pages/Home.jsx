@@ -4,7 +4,7 @@ import AllRooms from "../Components/AllRooms";
 import { toast } from "react-hot-toast";
 
 const getAllRooms = async (token) => {
-  let res = await fetch("http://localhost:8080/rooms/all", {
+  let res = await fetch("https://emt-backend-0bbo.onrender.com/rooms/all", {
     headers: {
       authentication: token,
     },
@@ -23,14 +23,17 @@ const Home = () => {
   const createRoom = async (e) => {
     setAddLoad(true);
     e.preventDefault();
-    let res = await fetch("http://localhost:8080/rooms/create/", {
-      method: "POST",
-      body: JSON.stringify({ roomname }),
-      headers: {
-        "Content-Type": "application/json",
-        authentication: token,
-      },
-    });
+    let res = await fetch(
+      "https://emt-backend-0bbo.onrender.com/rooms/create/",
+      {
+        method: "POST",
+        body: JSON.stringify({ roomname }),
+        headers: {
+          "Content-Type": "application/json",
+          authentication: token,
+        },
+      }
+    );
     res = await res.json();
     setAddLoad(false);
     setName("");
@@ -39,12 +42,15 @@ const Home = () => {
   };
   //delete a room func
   const handleDelete = async (roomId) => {
-    let res = await fetch(`http://localhost:8080/rooms/delete/${roomId}`, {
-      method: "DELETE",
-      headers: {
-        authentication: token,
-      },
-    });
+    let res = await fetch(
+      `https://emt-backend-0bbo.onrender.com/rooms/delete/${roomId}`,
+      {
+        method: "DELETE",
+        headers: {
+          authentication: token,
+        },
+      }
+    );
     res = await res.json();
     console.log(res);
     let rooms = await getAllRooms(token);
@@ -67,7 +73,7 @@ const Home = () => {
     });
   }, []);
   if (load) {
-    return <h1>....loading</h1>;
+    return <h1 className="loading-text">....loading</h1>;
   }
 
   return (
