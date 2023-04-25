@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #1c1e29;
+}
+.log-sign-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.formWrapper h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.formWrapper form input {
+  width: 100%;
+  padding: 6px;
+  font-size: 15px;
+}
+.formWrapper {
+  color: white;
+  background: #282a36;
+  padding: 20px;
+  width: 35%;
+}
+.primary-btn {
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  background: #4aed88;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+}
+.primary-btn:hover {
+  background-color: #282a36;
+  color: #4aed88;
+  border: 1px solid #4aed88;
+}
+.all-rooms-wrapper {
+  width: 65%;
+  margin: auto;
+  margin-top: 20px;
+}
+.all-rooms-wrapper div {
+  background: #282a36;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+.all-rooms-wrapper > div {
+  display: flex;
+  justify-content: space-between;
+}
+.room-name {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #4aed88;
+}
+.create-join-room-wrap {
+  width: 65%;
+  background: #282a36;
+  border-radius: 12px;
+  margin-bottom: 20px !important;
+  border: 2px solid #4aed88;
+  padding: 20px;
+  margin: auto;
+}
+.create-join-room-wrap h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+.create-join-room-wrap input {
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.aside {
+  width: 20%;
+  height: 100vh;
+  padding: 10px;
+}
+.aside > h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+.aside p {
+  color: #fc6c85;
+  font-size: 17px;
+}
+.aside > div {
+  border-top: 2px solid #40424b;
+  border-bottom: 2px solid #40424b;
+  padding: 10px 0 10px 0;
+}
+.code-editor {
+  width: 80%;
+
+  height: 100vh;
+}
+.editor-wrapper {
+  display: flex;
+}
+
+.secondary-btn {
+  font-size: 13px;
+  padding: 8px 14px 8px 14px;
+  background: rgb(225, 219, 219);
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  border: 3px solid #4aed88;
+  color: black;
+  font-weight: bold;
+}
+.secondary-btn:hover {
+  color: black;
+  background-color: #4aed88;
+}
+.copy-btn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+  background-color: #40424b;
+}
+.navbar > ul {
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+}
+.navbar ul li {
+  margin-right: 20px;
+  display: block;
+}
+.nav-link {
+  text-decoration: none;
+  color: white !important;
+  font-weight: bold;
+}
